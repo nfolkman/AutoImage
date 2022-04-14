@@ -1,0 +1,125 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+html{
+  background-color: #4e2f61;
+}
+
+.pageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  border-radius: 30px;
+  background-color: #fefeffd8;
+  z-index: 2;
+}
+
+.container{
+  width: 60vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  max-width: 370px;
+  max-height: 400px;
+}
+
+button{
+  width: 100px;
+  height: 40px;
+  border: .5px solid rgb(122, 121, 121);
+  border-radius: 19px;
+  margin: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(#636E72);
+  filter: brightness(85%);
+}
+
+svg{
+  position: absolute;
+  bottom: .2%;
+  z-index: 1;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+html{
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+
+
+
+
+/******************************************
+/* MEDIA QUERIES
+/*****************************************/
+
+@media screen and (max-width: 900px) and (min-width: 320px) {
+  .pageContainer{
+    justify-content: center;
+    align-items: center;
+  }
+  .mainContainer{
+    width: 97vw !important;
+    height: 75vh;
+    margin-top: 15%;
+    position: absolute;
+    bottom: 17%;
+  }
+  .container{
+    width: 95% !important;
+    height: 70vh;
+  }
+  img{
+    width: 75vw;
+    height: 75% !important;
+    max-height: 500px;
+  }
+  button{
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+  svg{
+    height: 250px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
