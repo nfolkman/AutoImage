@@ -12,7 +12,9 @@
 /*******************************************/
 
 html{
-  background-color: #4e2f61;
+  height: 100vh;
+  background-color: #cfc7f8;
+  background-image: linear-gradient(315deg, #bcb2f0 0%, #ebbba7 74%);
 }
 
 .pageContainer{
@@ -33,6 +35,11 @@ html{
   border-radius: 30px;
   background-color: #fefeffd8;
   z-index: 2;
+  box-shadow:
+     0 3.9px 4.6px rgba(0, 0, 0, 0.08),
+     0 12.3px 8.4px rgba(0, 0, 0, 0.056),
+     0 18.8px 19.2px rgba(0, 0, 0, 0.037),
+     0 22px 40px rgba(0, 0, 0, 0.019)
 }
 
 .container{
@@ -51,7 +58,7 @@ h1 {
 img{
   display: block;
   margin: 0 auto;
-  max-width: 370px;
+  max-width: 300px;
   max-height: 400px;
 }
 
@@ -69,11 +76,6 @@ button:hover {
   filter: brightness(85%);
 }
 
-svg{
-  position: absolute;
-  bottom: .2%;
-  z-index: 1;
-}
 
 
 /******************************************
@@ -91,35 +93,61 @@ html{
 /* MEDIA QUERIES
 /*****************************************/
 
-@media screen and (max-width: 900px) and (min-width: 320px) {
+/* Smartphone */
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+  html{
+    width: 100vw;
+    height: 100vh;
+  }
   .pageContainer{
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items:center;
+    width: 100vw !important;
+    height: 100vw;
   }
   .mainContainer{
-    width: 97vw !important;
+    width: 90vw !important;
     height: 75vh;
-    margin-top: 15%;
-    position: absolute;
-    bottom: 17%;
+    margin-top: 10%;
+    position: relative;
+    top: 17%;
+    right: .75%;
   }
   .container{
     width: 95% !important;
-    height: 70vh;
+    height: 70vh !important;
   }
   img{
     width: 75vw;
     height: 75% !important;
-    max-height: 500px;
   }
   button{
     margin-top: 0;
     margin-bottom: 45px;
   }
-  svg{
-    height: 250px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+}
+
+/* Tablet / iPad */
+
+@media  screen and (min-width: 501px) and (max-width:950px) {
+  
+  html{
+    height: 100vh;
+  }
+  .mainContainer{
+    width: 75vw;
+    height: 70vh;
+  }
+  .container{
+    height: 85%;
+  }
+  img{
+    width: 75%;
+    height: 80%;
+  }
+  button{
+    height: 40px;
+    margin-bottom: 30px;
   }
 }
